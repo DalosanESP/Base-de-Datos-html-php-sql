@@ -33,7 +33,7 @@ if(isset($_POST['btncerrar']))
 }
 	
 $sql="SELECT * FROM login";
-$result=mysqli_query($conn,$sql);
+$result=mysqli_query($conexion,$sql);
 
 while($mostrar=mysqli_fetch_array($result))
 {
