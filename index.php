@@ -46,7 +46,7 @@ $pass = $_POST["txtpassword"];
 	
 
 	
-$query = mysqli_query($conn,"SELECT * FROM login WHERE usuario = '".$nombre."' and contraseña = '".$pass."'");
+$query = mysqli_query($conexion,"SELECT * FROM login WHERE usuario = '".$nombre."' and contraseña = '".$pass."'");
 $nr = mysqli_num_rows($query);
 
 if($nr == 1)
