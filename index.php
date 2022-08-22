@@ -3,22 +3,20 @@
     <meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>Login</title>
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="Estilos/login.css">
   </head>
   <body>
 <div>
 <form method="post" action="index.php" name="vaidrollteam">
 
 <table>
-
-<tr><td style="background-color:#33A8DB;"><label>Login</label></td></tr>
-<tr><td><img src="logo.png"/></td></tr>
-<tr><td><input type="text" name="txtusuario" placeholder="&#128273; Ingresar usuario" required /></td></tr>
-<tr><td><input type="password" name="txtpassword" placeholder="&#128274; Ingresar Contraseña" required /> </td></tr>
-<tr><td><input type="submit" value="Ingresar" name="btningresar"/> </td></tr>
+<tr><td style="background-color:#5791aa;" ><label>Login</label></td></tr>
+<tr><td><input type="text" name="txtusuario" placeholder="&#128273;Usuario" required /></td></tr>
+<tr><td><input type="password" name="txtpassword" placeholder="&#128274;Contraseña" required /> </td></tr>
+<tr><td><input type="submit" value="Acceder" name="btningresar" /> </td></tr>
 
 <br>
-<tr><td><a href="registrar.php" style="float:right">Crear una cuenta</a></td></tr> 
+<tr><td><a href="registrar.php" style="float:right; color: white" >Crear una cuenta</a></td></tr> 
 
 </table>
 
