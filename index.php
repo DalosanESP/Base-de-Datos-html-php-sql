@@ -11,8 +11,8 @@
 
 <table>
 <tr><td style="background-color:#5791aa;" ><label>Acceder</label></td></tr>
-<tr><td><input type="text" name="txtusuario" placeholder="&#128273;Usuario" required /></td></tr>
-<tr><td><input type="password" name="txtpassword" placeholder="&#128274;Contraseña" required /> </td></tr>
+<tr><td><input type="text" name="txtusuario" placeholder="&#128273;Usuario" required style="color: white" /></td></tr>
+<tr><td><input type="password" name="txtpassword" placeholder="&#128274;Contraseña" required style="color: white" /> </td></tr>
 <tr><td><input type="submit" value="Acceder" name="btningresar" /> </td></tr>
 
 <br>
