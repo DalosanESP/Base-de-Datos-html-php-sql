@@ -3,7 +3,7 @@
     <meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>VaidrollTeam Registrar</title>
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="Estilos/login.css">
   </head>
   <body>
 <div>
@@ -11,10 +11,9 @@
 
 <table>
 
-<tr><td style="background-color:#33A8DB;"><label>Registrar</label></td></tr>
-<tr><td><img src="logo.png"/></td></tr>
-<tr><td><input type="text" name="txtusuario" placeholder="&#128273; Ingresar usuario" required /></td></tr>
-<tr><td><input type="password" name="txtpassword" placeholder="&#128274; Ingresar Contraseña" required /> </td></tr>
+<tr><td style="background-color:#5791aa;"><label>Registrar</label></td></tr>
+<tr><td><input type="text" name="txtusuario" placeholder="&#128273;Usuario" required /></td></tr>
+<tr><td><input type="password" name="txtpassword" placeholder="&#128274;Contraseña" required /> </td></tr>
 <tr><td><input type="submit" value="Registrar" name="btnregistrar"/> </td></tr>
 <br>
 <tr><td><a href="index.php" style="float:right">Iniciar sesión</a></td></tr>
