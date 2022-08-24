@@ -1,4 +1,5 @@
-<link rel="stylesheet" href="login.css">
+<body>
+<link rel="stylesheet" href="Estilos/listar.css">
 
 <table>
 <?php
@@ -8,7 +9,7 @@ session_start();
 if(isset($_SESSION['nombredelusuario']))
 {
 	$usuarioingresado = $_SESSION['nombredelusuario'];
-	echo "<tr><td colspan='2' align='center'><h1>Bienvenido: $usuarioingresado </h1></td></tr>";
+	echo "<tr style='color:rgb(86, 126, 187);'><td colspan='2' align='center'><h1>Bienvenido: $usuarioingresado </h1></td></tr>";
 }
 else
 {
@@ -19,9 +20,10 @@ else
 <tr><td colspan='2' align="center"><input type="submit" value="Cerrar sesión" name="btncerrar" /></td></tr>
 </form>
 
-<tr><td colspan="2"><h1>Listado de usuarios</h1></td></tr>
-<tr><td><label>Usuario</label></td>
-	<td><label>Contraseña</label></td>
+<tr><td colspan="2" style='color: rgb(86, 126, 187);'><h1>Listado de usuarios</h1></td></tr>
+<tr><td style='color: rgb(86, 126, 187);'><label>Usuario</label></td>
+<!-- <td style='color: rgb(86, 126, 187);'><label>Contraseña</label></td>-->
+	
 </tr>
 
 <?php 
@@ -39,8 +41,8 @@ while($mostrar=mysqli_fetch_array($result))
 {
 	
 ?>
-<tr> <td><?php echo $mostrar['usuario'] ?>
-	<td><?php echo $mostrar['contraseña'] ?>
+<tr> <td style='color: white'><?php echo $mostrar['usuario'] ?>
+	<!--<td><?php echo $mostrar['contraseña'] ?>-->
 
 </tr>
 <?php
@@ -50,3 +52,4 @@ while($mostrar=mysqli_fetch_array($result))
 
 ?>
 </table>
+</body>

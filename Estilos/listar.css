@@ -1,0 +1,46 @@
+table 
+{
+border: 2px solid rgb(86, 126, 187);
+margin: 200px 1200px;
+width: 0px;
+height: 100px;
+}
+body {
+  background-image: url('Imagenes/listar.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+input[type=text], input[type=password]
+{
+width: 100%px;
+padding: 0px 0px;
+border: 2px solid rgb(86, 126, 187);
+box-sizing: border-box;
+background-color: rgb(86, 126, 187);
+margin: 0px 120px;
+}
+label
+{
+font-size: 14px;
+font-weight: bold;
+font-family: arial;
+margin:200px ;
+}
+
+input[type=submit]
+{
+background-color: rgb(86, 126, 187);
+color:white;
+padding: px 15px;
+margin: 0px 120px;
+border: solid;
+cursor: pointer;
+width: 50%;
+}
+form{
+  border: 2px solid rgb(86, 126, 187);
+}
+td{
+    text-align: center;
+}

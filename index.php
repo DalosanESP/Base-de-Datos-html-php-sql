@@ -7,7 +7,7 @@
   </head>
   <body>
 <div>
-<form method="post" action="index.php" name="vaidrollteam">
+<form method="post" action="index.php" name="login">
 
 <table>
 <tr><td style="background-color:#5791aa;" ><label>Acceder</label></td></tr>
