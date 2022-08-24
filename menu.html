@@ -3,28 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Estilos/menu.css">
     <title>Menu</title>
-
-    <style>
-      body {
-        background-color: #87ccc1;
-        margin: 0;
-        padding: 0;
-      }
-      h1 {
-        text-align: center;
-        width: 50%;
-        margin: auto;
-        margin-top: 30px;
-      }
-      table {
-        border: 3px solid #cca633;
-        padding: 20px 50px;
-        margin-top: 20px;
-        border-radius: 5px;
-        background-color: #edf797;
-      }
-    </style>
   </head>
   <body>
     <h1>Menu</h1>
@@ -32,28 +12,46 @@
         <tr>
           <td>
             <form action="formulario_personaje.php">
-              <input type="submit" style="cursor: pointer;" value="Añadir Nuevo Personaje" />
-            </form>
-            <form action="formulario_afiliacion.html">
-              <input type="submit" style="cursor: pointer;" value="Añadir Nueva Afiliacion" />
-            </form>
-            <form action="formulario_oficio.html">
-              <input type="submit" style="cursor: pointer;" value="Añadir Nuevo Oficio" />
-            </form>
-            <form action="formulario_arma.html">
-              <input type="submit" style="cursor: pointer;" value="Añadir Nueva Arma" />
-            </form>
-            <form action="formulario_planeta.html">
-              <input type="submit" style="cursor: pointer;" value="Añadir Nuevo Planeta de Origen" />
-            </form>
-            <form action="formulario_especie.html">
-              <input type="submit" style="cursor: pointer;" value="Añadir Nueva Especie" />
-            </form>
-            <form action="index.php">
-              <input type="submit" style="cursor: pointer;" value="Ver lista de usuarios" />
+              <input type="submit" style="cursor: pointer;" value="Añadir Personaje" />
             </form>
           </td>
+            <td>
+              
+            <form action="formulario_planeta.php">
+              <input type="submit" style="cursor: pointer;" value="Planetas Origen" />
+            </form>
+            
+          </td>
+        </tr>
+        <tr>
           <td>
+            <form action="formulario_oficio.php">
+              <input type="submit" style="cursor: pointer;" value="Oficios" />
+            </form>
+          </td>
+            <td>
+            <form action="formulario_arma.php">
+              <input type="submit" style="cursor: pointer;" value="Armas" />
+            </form>
+            </td>
+        </tr>
+            <tr>
+            <td>
+              <form action="formulario_afiliacion.php">
+                <input type="submit" style="cursor: pointer;" value="Afiliaciones" />
+              </form>
+          </td>
+            <td>
+            <form action="formulario_especie.php">
+              <input type="submit" style="cursor: pointer;" value="Especies" />
+            </form>
+          </td>
+        </tr>
+            <td colspan="3">
+            <form action="index.php">
+              <input type="submit" style="cursor: pointer;" value="Ver usuarios" />
+            </form>
+          </td>
         </tr>
       </table>
   </body>
