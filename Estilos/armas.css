@@ -1,11 +1,11 @@
 table 
 {
-border: 2px solid rgb(74, 141, 228);
-margin: 250px 200px;
+border: 2px solid darkgreen;
+margin: auto
 
 }
 body {
-  background-image: url('Imagenes/login2.jpg');
+  background-image: url('Imagenes/armas.png');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;
@@ -15,7 +15,7 @@ input[type=text], input[type=password]
   margin:5px;
   color:white;
   border: solid;
-  font-size: 15px;
+  font-size: 20px;
   cursor: pointer;
   background-color: transparent;
   color: white;
@@ -38,7 +38,7 @@ width: 50%;
 height: 50%;
 font-size: 15px;
 cursor: pointer;
-background-color: rgb(74, 141, 228);
+background-color: darkgreen;
 color: white;
 border-radius: 25px;
 }

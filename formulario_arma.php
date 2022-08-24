@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>formulario arma</title>
+    <link rel="stylesheet" href="Estilos/armas.css">
   </head>
   <body>
     <h1>AÑADIR ARMA</h1>
@@ -31,9 +32,6 @@
               value="Enviar"
             />
           </td>
-          <td align="center">
-            <input type="reset" name="borrar" id="borrar" value="Restablecer" />
-          </td>
         </tr>
       </table>
     </form>
@@ -44,8 +42,8 @@ include('conexion.php');
 session_start();
 ?>
 
-<tr><td colspan="2" style='color: rgb(86, 126, 187);'><h1>Listado de planetas</h1></td></tr>
-<tr><td style='color: rgb(86, 126, 187);'><label>Planetas</label></td>
+<tr><td colspan="2" style='color: darkgreen;'><h1>Lista de Armas</h1></td></tr>
+<tr><td style='color: darkgreen;'><label>Armas</label></td>
 	
 </tr>
 <!-- PARA MOSTRAR LISTAS -->
