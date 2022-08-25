@@ -1,12 +1,12 @@
 table 
 {
 padding: 25px;
-font-size: 100px black;
+font-size: 100px white;
 margin: 100px 200px;
-border: 5px solid black;
+border: 5px solid white;
 }
 body {
-  background-image: url('Imagenes/afiliaciones.jpg');
+  background-image: url('Imagenes/afiliacion.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;
@@ -18,27 +18,29 @@ input[type=text], input[type=password]
   font-size: 15px;
   cursor: pointer;
   background-color: transparent;
-  color: black;
+  color: white;
   border-radius: 25px;
+  
 }
 
 input[type=submit]
 {
 margin:5px 75px;
-border: solid black;
+border: solid white;
 width: 50%;
 height: 50%;
-font-size: 15px;
+font-size: 15px white;
 cursor: pointer;
 background-color:transparent;
-color: black;
+color: white;
 border-radius: 25px;
 }
 td{
-    font-size: 10px black;
+    font-size: 10px white;
     text-align: center;
-    border: 5px black;
+    border: 5px white;
 }
 tr{
-    border: 5px solid black;
+    border: 5px solid white;
+    font-size: 10px white;
 }

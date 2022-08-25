@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>formulario afiliacion</title>
+    <title>Formulario Afiliacion</title>
     <link rel="stylesheet" href="Estilos/afiliaciones.css">
   </head>
   <body>
@@ -11,11 +11,11 @@
       <table>
       <tr>
           <td colspan="2">
-          <h1>NUEVA AFILIACION</h1>
+         <h1 style="color:white";>NUEVA AFILIACION</h1>
           </td>
         <tr>
           <td >
-          <h2 align="center">Nombre</h2>
+          <h2 style="color:white";>Nombre</h2>
           </td>
           <td>
             <label for="right"></label>
@@ -34,7 +34,7 @@ include('conexion.php');
 session_start();
 ?>
 <table>
-<tr><td colspan="2"><h1>Lista de Afiliaciones</h1></td></tr>
+<tr><td colspan="2"><h1 style="color:white";>Lista de Afiliaciones</h1></td></tr>
 	
 </tr>
 <!-- PARA MOSTRAR LISTAS -->
@@ -47,7 +47,7 @@ while($mostrar=mysqli_fetch_array($result))
 	
 ?>
 <tr style="text-align: center;">
-	    <td style="font-size:25px;"><?php echo $mostrar['nombre'] ?></td>
+	    <td style="color:white";><?php echo $mostrar['nombre'] ?></td>
 
 </tr>
 <?php

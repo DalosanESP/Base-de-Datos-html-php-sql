@@ -3,47 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>formulario arma</title>
+    <title>Formulario Arma</title>
     <link rel="stylesheet" href="Estilos/armas.css">
   </head>
   <body>
-    <h1>AÑADIR ARMA</h1>
     <form action="conexion_arma.php" name="" method="POST">
-      <table border="0" align="center">
+      <table>
+      <tr>
+          <td colspan="2">
+          <h1  style="color:white";>NUEVA ARMA</h1>
+          </td>
         <tr>
-          <td>
-            Nombre
+          <td >
+          <h2 align="center"  style="color:white";>Nombre</h2>
           </td>
           <td>
-            <label for="nombre"></label>
+            <label for="right"></label>
             <input type="text" name="nombre" id="nombre" required  />
           </td>
         </tr>
         <tr>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-        </tr>
-        <tr>
-          <td align="center">
-            <input
-              type="submit"
-              name="enviar"
-              id="enviar"
-              value="Enviar"
-            />
+          <td align="center" colspan="2">
+            <input type="submit" name="enviar" id="enviar" value="Añadir" />
           </td>
         </tr>
       </table>
     </form>
-  </body>
-</html>
-<?php
+    <?php
 include('conexion.php');
 session_start();
 ?>
-
-<tr><td colspan="2" style='color: darkgreen;'><h1>Lista de Armas</h1></td></tr>
-<tr><td style='color: darkgreen;'><label>Armas</label></td>
+<table>
+<tr><td colspan="2"><h1  style="color:white";>Lista de Armas</h1></td></tr>
 	
 </tr>
 <!-- PARA MOSTRAR LISTAS -->
@@ -53,17 +44,15 @@ $result=mysqli_query($conexion,$sql);
 
 while($mostrar=mysqli_fetch_array($result))
 {
-echo "<table>";
-echo "<tr>";
-echo "<th><h1>id</th></h1>";
-echo "<th><h1>Nombre</th></h1>";
-echo "</tr>";
 	
 ?>
-<tr> <td ><?php echo $mostrar['id'] ?></td>
-	    <td><?php echo $mostrar['nombre'] ?></td>
+<tr style="text-align: center;">
+	    <td  style="color:white";><?php echo $mostrar['nombre'] ?></td>
 
 </tr>
 <?php
 }
 ?>
+
+</body>
+</html>

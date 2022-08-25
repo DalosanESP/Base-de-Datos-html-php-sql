@@ -1,34 +1,33 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>conexion_arma</title>
-    <style type="text/css">
-     
-      table {
-        border: solid 2px #7e7c7c;
-        border-collapse: collapse;
-                     
-      }
-     
-      th, h1 {
-        background-color: #edf797;
-      }
-
-      td,
-      th {
-        border: solid 1px #7e7c7c;
-        padding: 2px;
-        text-align: center;
-      }
-
-
-    </style>
+    <title>Conexion Arma</title>
+    <link rel="stylesheet" href="Estilos/armas.css">
 </head>
 <body>
-    
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+    <h1 style="color:white";>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NUEVA ARMA 
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AÑADIDA CON EXITO</h1>
 </body>
 </html>
 
@@ -37,20 +36,18 @@ include('conexion.php');
 session_start();
 $sql="SELECT * FROM arma";
 $result=mysqli_query($conexion,$sql);
+$nombre = $_POST["nombre"] ;
 
-while($mostrar=mysqli_fetch_array($result))
-{
-echo "<table>";
-echo "<tr>";
-echo "<th><h1>id</th></h1>";
-echo "<th><h1>Nombre</th></h1>";
-echo "</tr>";
-	
-?>
-<tr> <td ><?php echo $mostrar['id'] ?></td>
-	    <td><?php echo $mostrar['nombre'] ?></td>
+        //indicamos el nombre de la base datos
+        $datab = "mi_base";
+        //indicamos selecionar ala base datos
+        $db = mysqli_select_db($conexion,$datab);
 
-</tr>
-<?php
-}
-?>
+        //insertamos datos de registro al mysql xamp, indicando nombre de la tabla y sus atributos
+        $instruccion_SQL = "INSERT INTO arma (nombre)
+                             VALUES ('$nombre')";
+
+
+        $resultado = mysqli_query($conexion,$instruccion_SQL);
+
+   ?> 
