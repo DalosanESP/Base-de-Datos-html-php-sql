@@ -1,12 +1,12 @@
 table 
 {
-padding: 25px;
 font-size: 100px white;
-margin: 100px 200px;
+margin: 100px 100px;
 border: 5px solid white;
+
 }
 body {
-  background-image: url('Imagenes/afiliacion.jpg');
+  background-image: url('Imagenes/personaje.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;
@@ -43,4 +43,14 @@ td{
 tr{
     border: 5px solid white;
     font-size: 10px white;
+}
+select{
+    margin:5px;
+    border: solid white;
+    font-size: 15px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    size: 100px;
+    width: 200px;
 }

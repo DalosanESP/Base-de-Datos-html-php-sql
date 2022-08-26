@@ -4,45 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>conexion</title>
-    <style type="text/css">
-     
-      table {
-        border: solid 2px #7e7c7c;
-        border-collapse: collapse;
-                     
-      }
-     
-      th, h1 {
-        background-color: #edf797;
-      }
-
-      td,
-      th {
-        border: solid 1px #7e7c7c;
-        padding: 2px;
-        text-align: center;
-      }
-
-
-    </style>
-</head>
-<body>
-    
-</body>
-</html>
-
+    <title>Conexion Personaje</title>
+    <link rel="stylesheet" href="Estilos/personaje2.css">
+    <body>
 
 <?php
-//validamos datos del servidor
-$user = "root";
-$pass = "";
-$host = "localhost";
+include('conexion.php');
+session_start();
+$sql="SELECT * FROM personaje";
+$result=mysqli_query($conexion,$sql);
 
-//conetamos al base datos
-$connection = mysqli_connect($host, $user, $pass);
-
-//hacemos llamado al imput de formuario
 $nombre = $_POST["nombre"] ;
 $apellido = $_POST["apellido"] ;
 $afiliacion = $_POST["afiliacion"] ;
@@ -52,71 +23,52 @@ $arma = $_POST["arma"] ;
 $oficio = $_POST["oficio"] ;
 
 
-//verificamos la conexion a base datos
-if(!$connection) 
-        {
-            echo "No se ha podido conectar con el servidor" . mysql_error();
-        }
-  else
-        {
-            echo "<b><h3>Hemos conectado al servidor</h3></b>" ;
-        }
         //indicamos el nombre de la base datos
         $datab = "mi_base";
         //indicamos selecionar ala base datos
-        $db = mysqli_select_db($connection,$datab);
+        $db = mysqli_select_db($conexion,$datab);
 
-        if (!$db)
-        {
-        echo "No se ha podido encontrar la Tabla";
-        }
-        else
-        {
-        echo "<h3>Tabla seleccionada:</h3>" ;
-        }
+        
         //insertamos datos de registro al mysql xamp, indicando nombre de la tabla y sus atributos
         $instruccion_SQL = "INSERT INTO personaje (nombre, apellido, afiliacion, especie, planeta_origen, arma, oficio)
                              VALUES ('$nombre','$apellido', '$afiliacion', '$especie', '$planeta_origen', '$arma', '$oficio')";
                            
                             
-        $resultado = mysqli_query($connection,$instruccion_SQL);
+        $resultado = mysqli_query($conexion,$instruccion_SQL);
 
         //$consulta = "SELECT * FROM tabla where id ='2'"; si queremos que nos muestre solo un registro en especifivo de ID
         $consulta = "SELECT * FROM personaje";
         
-$result = mysqli_query($connection,$consulta);
-if(!$result) 
-{
-    echo "No se ha podido realizar la consulta";
-}
-echo "<table>";
+$result = mysqli_query($conexion,$consulta);
+
+echo "<table cellspacing='10' >";
 echo "<tr>";
-echo "<th><h1>id</th></h1>";
-echo "<th><h1>Nombre</th></h1>";
-echo "<th><h1>Apellido</th></h1>";
-echo "<th><h1>Afiliacion</th></h1>";
-echo "<th><h1>Especie</th></h1>";
-echo "<th><h1>Plante de Origen</th></h1>";
-echo "<th><h1>Arma</th></h1>";
-echo "<th><h1>Oficio</th></h1>";
+echo "<th style='color:white';>id</th>";
+echo "<th style='color:white';>Nombre</th>";
+echo "<th style='color:white';>Apellido</th>";
+echo "<th style='color:white';>Afiliacion</th>";
+echo "<th style='color:white';>Especie</th>";
+echo "<th style='color:white';>Plante de Origen</th>";
+echo "<th style='color:white';>Arma</th>";
+echo "<th style='color:white';  >Oficio</th>";
 echo "</tr>";
 
 while ($colum = mysqli_fetch_array($result))
  {
     echo "<tr>";
-    echo "<td><h2>" . $colum['id']. "</td></h2>";
-    echo "<td><h2>" . $colum['nombre']. "</td></h2>";
-    echo "<td><h2>" . $colum['apellido'] . "</td></h2>";
-    echo "<td><h2>" . $colum['afiliacion'] . "</td></h2>";
-    echo "<td><h2>" . $colum['especie'] . "</td></h2>";
-    echo "<td><h2>" . $colum['planeta_origen'] . "</td></h2>";
-    echo "<td><h2>" . $colum['arma'] . "</td></h2>";
-    echo "<td><h2>" . $colum['oficio'] . "</td></h2>";
+    echo "<td style='color:white';>" . $colum['id']. "</td>";
+    echo "<td style='color:white';>" . $colum['nombre']. "</td>";
+    echo "<td style='color:white';>" . $colum['apellido'] . "</td>";
+    echo "<td style='color:white';>" . $colum['afiliacion'] . "</td>";
+    echo "<td style='color:white';>" . $colum['especie'] . "</td>";
+    echo "<td style='color:white';>" . $colum['planeta_origen'] . "</td>";
+    echo "<td style='color:white';>" . $colum['arma'] . "</td>";
+    echo "<td style='color:white';>" . $colum['oficio'] . "</td>";
     echo "</tr>";
 }
 echo "</table>";
 
-mysqli_close( $connection );
+mysqli_close( $conexion );
 
    //echo "Fuera " ;
    echo'<a href="index.html"> Volver Atrás</a>';

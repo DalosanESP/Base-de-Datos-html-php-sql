@@ -4,36 +4,19 @@ include 'conexion.php';
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <title>formulario de personaje</title>
-
-    <style>
-      body {
-        background-color: #87ccc1;
-        margin: 0;
-        padding: 0;
-      }
-      h1 {
-        text-align: center;
-        width: 50%;
-        margin: auto;
-        margin-top: 30px;
-      }
-      table {
-        border: 3px solid #cca633;
-        padding: 20px 50px;
-        margin-top: 20px;
-        border-radius: 5px;
-        background-color: #edf797;
-      }
-    </style>
+    <title>Formulario de Personaje</title>
+    <link rel="stylesheet" href="Estilos/personaje.css">
   </head>
   <body>
-  
-    <h1>INGRESE LOS DATOS DEL PERSONAJE</h1>
     <form id="personaje" action="conexion_personaje.php" method="POST">
       <table border="0" align="center">
         <tr>
-          <td>
+        <td style="color:white"; colspan="2">
+        INGRESE LOS DATOS DEL PERSONAJE
+          </td>
+        </tr>
+        <tr>
+          <td style="color:white";>
             Nombre
           </td>
           <td>
@@ -42,7 +25,7 @@ include 'conexion.php';
           </td>
         </tr>
         <tr>
-          <td>
+          <td style="color:white";>
             Apellido
           </td>
           <td>
@@ -51,7 +34,7 @@ include 'conexion.php';
           </td>
         </tr>
         <tr>
-          <td>
+          <td style="color:white";>
             Afiliacion
           </td>
           <td>
@@ -69,7 +52,7 @@ include 'conexion.php';
           </td>
         </tr>
         <tr>
-          <td>
+          <td style="color:white";>
             Arma
           </td>
           <td>
@@ -87,7 +70,7 @@ include 'conexion.php';
           </td>
         </tr>
         <tr>
-          <td>
+          <td style="color:white";>
             Especie
           </td>
           <td>
@@ -105,7 +88,7 @@ include 'conexion.php';
           </td>
         </tr>
         <tr>
-          <td>
+          <td style="color:white";>
             Planeta de Origen
           </td>
           <td>
@@ -123,7 +106,7 @@ include 'conexion.php';
           </td>
         </tr>
         <tr>
-          <td>
+          <td style="color:white";>
             Oficio
           </td>
           <td>
@@ -145,16 +128,13 @@ include 'conexion.php';
           <td>&nbsp;</td>
         </tr>
         <tr>
-          <td align="center">
+          <td align="center" colspan="2">
             <input
               type="submit"
               name="enviar"
               id="enviar"
               value="Enviar"
             />
-          </td>
-          <td align="center">
-            <input type="reset" name="borrar" id="borrar" value="Restablecer" />
           </td>
         </tr>
       </table>
