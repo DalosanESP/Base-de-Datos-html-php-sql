@@ -29,6 +29,7 @@
         </tr>
       </table>
     </form>
+    <!--
     <?php
 include('conexion.php');
 session_start();
@@ -37,7 +38,7 @@ session_start();
 <tr><td colspan="2"><h1  style="color:white";>Lista de Armas</h1></td></tr>
 	
 </tr>
-<!-- PARA MOSTRAR LISTAS -->
+<!-- PARA MOSTRAR LISTAS 
 <?php 
 $sql="SELECT * FROM arma";
 $result=mysqli_query($conexion,$sql);
@@ -53,6 +54,6 @@ while($mostrar=mysqli_fetch_array($result))
 <?php
 }
 ?>
-
+-->
 </body>
 </html>

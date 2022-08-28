@@ -29,15 +29,16 @@
         </tr>
       </table>
     </form>
+    <!--
     <?php
 include('conexion.php');
 session_start();
 ?>
 <table>
-<tr><td colspan="2"><h1  style="color:white";>Lista de Especies</h1></td></tr>
+<tr><td><h1  style="color:white";>Lista de Especies</h1></td></tr>
 	
 </tr>
-<!-- PARA MOSTRAR LISTAS -->
+<!-- PARA MOSTRAR LISTAS 
 <?php 
 $sql="SELECT * FROM especie";
 $result=mysqli_query($conexion,$sql);
@@ -47,12 +48,12 @@ while($mostrar=mysqli_fetch_array($result))
 	
 ?>
 <tr style="text-align: center;">
-	    <td  style="color:white";><?php echo $mostrar['nombre'] ?></td>
+	    <td  style="color:white";><h2><?php echo $mostrar['nombre'] ?></h2></td>
 
 </tr>
 <?php
 }
 ?>
-
+-->
 </body>
 </html>
