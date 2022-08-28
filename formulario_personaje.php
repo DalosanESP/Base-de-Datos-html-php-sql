@@ -123,6 +123,7 @@ include 'conexion.php';
               </select>
           </td>
         </tr>
+        </form>
         <tr>
           <td>&nbsp;</td>
           <td>&nbsp;</td>
@@ -138,6 +139,6 @@ include 'conexion.php';
           </td>
         </tr>
       </table>
-    </form>
+    
   </body>
 </html>

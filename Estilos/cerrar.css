@@ -1,26 +1,15 @@
 table 
 {
+padding: 25px;
 font-size: 100px white;
-margin: 100px 100px;
+margin: 250px 200px;
 border: 5px solid white;
-
 }
 body {
-  background-image: url('Imagenes/ver.jpg');
+  background-image: url('Imagenes/cerrar.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;
-}
-input[type=text]
-{
-  margin:5px;
-  border: solid;
-  font-size: 15px;
-  cursor: pointer;
-  background-color: transparent;
-  color: white;
-  border-radius: 25px;
-  
 }
 
 input[type=submit]
@@ -43,14 +32,4 @@ td{
 tr{
     border: 5px solid white;
     font-size: 10px white;
-}
-select{
-    margin:5px;
-    border: solid white;
-    font-size: 15px;
-    cursor: pointer;
-    background-color: black;
-    color: white;
-    size: 100px;
-    width: 200px;
 }

@@ -31,7 +31,7 @@ include('conexion.php');
 session_start();
 if(isset($_SESSION['nombredelusuario']))
 {
-	header('location: listar.php');
+	header('location: cerrar.php');
 }
 
 if(isset($_POST['btningresar']))
