@@ -16,7 +16,7 @@ input[type=text], input[type=password]
   color:white;
   border: solid;
   font-size: 15px;
-  cursor: pointer;
+  cursor: text;
   background-color: transparent;
   color: white;
   border-radius: 25px;

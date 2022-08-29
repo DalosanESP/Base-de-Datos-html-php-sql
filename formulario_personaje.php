@@ -40,7 +40,7 @@ include 'conexion.php';
           <td>
             <select name="afiliacion">
             <?php
-              $afiliaciones=$conexion->query("SELECT * FROM afiliacion");
+              $afiliaciones=$conexion->query("SELECT * FROM afiliacion order by nombre");
               while($fila=$afiliaciones->fetch_array()){
                 $afiliacion=$fila[1];
                 ?>
@@ -58,7 +58,7 @@ include 'conexion.php';
           <td>
             <select name="arma">
             <?php
-              $armas=$conexion->query("SELECT * FROM arma");
+              $armas=$conexion->query("SELECT * FROM arma order by nombre");
               while($fila=$armas->fetch_array()){
                 $arma=$fila[1];
                 ?>
@@ -76,7 +76,7 @@ include 'conexion.php';
           <td>
             <select name="especie">
             <?php
-              $especies=$conexion->query("SELECT * FROM especie");
+              $especies=$conexion->query("SELECT * FROM especie order by nombre");
               while($fila=$especies->fetch_array()){
                 $especie=$fila[1];
                 ?>
@@ -94,7 +94,7 @@ include 'conexion.php';
           <td>
             <select name="planeta_origen">
             <?php
-              $planetas_origen=$conexion->query("SELECT * FROM planeta_origen order by id");
+              $planetas_origen=$conexion->query("SELECT * FROM planeta_origen order by nombre");
               while($fila=$planetas_origen->fetch_array()){
                 $planeta_origen=$fila[1];
                 ?>
@@ -112,11 +112,30 @@ include 'conexion.php';
           <td>
             <select name="oficio">
             <?php
-              $oficios=$conexion->query("SELECT * FROM oficio");
+              $oficios=$conexion->query("SELECT * FROM oficio order by nombre");
               while($fila=$oficios->fetch_array()){
                 $oficio=$fila[1];
                 ?>
                 <option value="<?php echo $oficio?>"><?php echo $oficio?></option>
+                <?php
+              }
+          ?>
+              </select>
+          </td>
+        </tr>
+        </tr>
+        <tr>
+          <td style="color:white";>
+            Nave
+          </td>
+          <td>
+            <select name="nave">
+            <?php
+              $naves=$conexion->query("SELECT * FROM nave order by nombre");
+              while($fila=$naves->fetch_array()){
+                $nave=$fila[1];
+                ?>
+                <option value="<?php echo $nave?>"><?php echo $nave?></option>
                 <?php
               }
           ?>

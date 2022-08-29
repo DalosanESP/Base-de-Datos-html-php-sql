@@ -3,33 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="Estilos/personaje.css">
+    <link rel="stylesheet" href="Estilos/nave.css">
     <title>Menu</title>
   </head>
   <body>
     
       <table border="0" align="center">
-        <tr><td><h3 style="color: white;">Menu Personaje</h3></td></tr>
+        <tr><td><h3 style="color: white;">Menu Nave</h3></td></tr>
+        <tr>
+            <td>
+              <form action="formulario_nave.php">
+                <input type="submit" style="cursor: pointer;" value="Añadir Nueva Nave" />
+              </form>
+            </td>
         <tr>
           <td>
-            <form action="buscar_personaje.php">
-              <input type="submit" style="cursor: pointer;" value="Buscar Personaje" />
+            <form action="buscar_nave.php">
+              <input type="submit" style="cursor: pointer;" value="Buscar Nave" />
             </form>
           </td>
         </tr>
         <tr>
           <td>
-            <form action="formulario_personaje.php">
-              <input type="submit" style="cursor: pointer;" value="Añadir Personaje" />
-            </form>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <form action="ver_personaje.php">
+            <form action="ver_nave.php">
               <input type="submit" style="cursor: pointer;" value="Ver Lista Entera" />
             </form>
           </td>
+        </tr>
+        
           <tr>
             <td>
             <form action="menu.html">

@@ -21,6 +21,7 @@ $especie = $_POST["especie"] ;
 $planeta_origen = $_POST["planeta_origen"] ;
 $arma = $_POST["arma"] ;
 $oficio = $_POST["oficio"] ;
+$nave = $_POST["nave"] ;
 
 
         //indicamos el nombre de la base datos
@@ -30,8 +31,8 @@ $oficio = $_POST["oficio"] ;
 
         
         //insertamos datos de registro al mysql xamp, indicando nombre de la tabla y sus atributos
-        $instruccion_SQL = "INSERT INTO personaje (nombre, apellido, afiliacion, especie, planeta_origen, arma, oficio)
-                             VALUES ('$nombre','$apellido', '$afiliacion', '$especie', '$planeta_origen', '$arma', '$oficio')";
+        $instruccion_SQL = "INSERT INTO personaje (nombre, apellido, afiliacion, especie, planeta_origen, arma, oficio,nave)
+                             VALUES ('$nombre','$apellido', '$afiliacion', '$especie', '$planeta_origen', '$arma', '$oficio','$nave')";
                            
                             
         $resultado = mysqli_query($conexion,$instruccion_SQL);
@@ -50,7 +51,8 @@ echo "<th style='color:white';>Afiliacion</th>";
 echo "<th style='color:white';>Especie</th>";
 echo "<th style='color:white';>Plante de Origen</th>";
 echo "<th style='color:white';>Arma</th>";
-echo "<th style='color:white';  >Oficio</th>";
+echo "<th style='color:white';>Oficio</th>";
+echo "<th style='color:white';>Nave</th>";
 echo "</tr>";
 
 while ($colum = mysqli_fetch_array($result))
@@ -64,6 +66,7 @@ while ($colum = mysqli_fetch_array($result))
     echo "<td style='color:white';>" . $colum['planeta_origen'] . "</td>";
     echo "<td style='color:white';>" . $colum['arma'] . "</td>";
     echo "<td style='color:white';>" . $colum['oficio'] . "</td>";
+    echo "<td style='color:white';>" . $colum['nave'] . "</td>";
     echo "</tr>";
 }
 echo "</table>";

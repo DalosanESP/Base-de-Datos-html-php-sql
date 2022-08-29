@@ -1,8 +1,6 @@
 table 
 {
-margin: 175px 540px;
-width: 0px;
-height: 100px;
+margin: 175px 675px;
 }
 body {
   background-image: url('Imagenes/menu.jpg');
@@ -10,16 +8,13 @@ body {
   background-attachment: fixed;
   background-size: 100% 100%;
 }
-label
-{
-font-size: 14px;
-font-weight: bold;
-font-family: arial;
-margin:200px ;
-}
 td{
     width: 100%;
     text-align: center;
+}
+tr{
+  width: 100%;
+  text-align: center;
 }
 input[type=submit]
 {
@@ -36,6 +31,7 @@ box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6);
 border-radius: 25px;
 }
 h1{
+   margin: 100px 675px;
     font-size: 75px;
     text-align: center;
 }

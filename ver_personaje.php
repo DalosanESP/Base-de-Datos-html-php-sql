@@ -24,6 +24,7 @@ echo "<th style='color:white';>Especie</th>";
 echo "<th style='color:white';>Plante de Origen</th>";
 echo "<th style='color:white';>Arma</th>";
 echo "<th style='color:white';  >Oficio</th>";
+echo "<th style='color:white';  >Nave</th>";
 echo "</tr>";
 
 while ($colum = mysqli_fetch_array($result))
@@ -37,6 +38,7 @@ while ($colum = mysqli_fetch_array($result))
     echo "<td style='color:white';>" . $colum['planeta_origen'] . "</td>";
     echo "<td style='color:white';>" . $colum['arma'] . "</td>";
     echo "<td style='color:white';>" . $colum['oficio'] . "</td>";
+    echo "<td style='color:white';>" . $colum['nave'] . "</td>";
     echo "</tr>";
 }
 echo "</table>";
