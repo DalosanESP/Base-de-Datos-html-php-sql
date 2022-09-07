@@ -44,7 +44,6 @@ $result = mysqli_query($conexion,$consulta);
 
 echo "<table cellspacing='10' >";
 echo "<tr>";
-echo "<th style='color:white';>id</th>";
 echo "<th style='color:white';>Nombre</th>";
 echo "<th style='color:white';>Apellido</th>";
 echo "<th style='color:white';>Afiliacion</th>";
@@ -58,7 +57,6 @@ echo "</tr>";
 while ($colum = mysqli_fetch_array($result))
  {
     echo "<tr>";
-    echo "<td style='color:white';>" . $colum['id']. "</td>";
     echo "<td style='color:white';>" . $colum['nombre']. "</td>";
     echo "<td style='color:white';>" . $colum['apellido'] . "</td>";
     echo "<td style='color:white';>" . $colum['afiliacion'] . "</td>";
