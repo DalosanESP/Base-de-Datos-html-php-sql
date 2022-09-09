@@ -59,7 +59,7 @@ echo "</table>";
 mysqli_close( $conexion );
 
    //echo "Fuera " ;
-   echo'<a href="index.html"> Volver Atrás</a>';
+   echo'<a href="menu.html"> Volver al Menu</a>';
 
 
 ?>
