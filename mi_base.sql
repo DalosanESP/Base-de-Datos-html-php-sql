@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 13-09-2022 a las 16:01:54
+-- Tiempo de generación: 20-09-2022 a las 16:57:18
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 8.1.6
 
@@ -43,6 +43,7 @@ INSERT INTO `afiliacion` (`id`, `nombre`) VALUES
 (6, 'Antigua Republica'),
 (23, 'Banda de Hondo'),
 (15, 'Colectivo Sombra'),
+(24, 'Crimson Dawn'),
 (21, 'Federacion de Sistemas Neutrales'),
 (12, 'Gremio de Cazarrecompensas'),
 (20, 'Guardia de la Muerte'),
@@ -102,6 +103,7 @@ INSERT INTO `arma` (`id`, `nombre`) VALUES
 (33, 'DX-13'),
 (12, 'E-11'),
 (13, 'E-11D'),
+(66, 'EC-17'),
 (11, 'EE-3'),
 (39, 'EL-16'),
 (23, 'ELG-3A'),
@@ -121,11 +123,14 @@ INSERT INTO `arma` (`id`, `nombre`) VALUES
 (60, 'Latigo Laser'),
 (46, 'LL-30'),
 (29, 'No Usa'),
+(65, 'Pistola Especial Snubble'),
 (53, 'Pistola Weequay'),
 (10, 'Relby-v10'),
 (62, 'Repetidor ACP'),
 (49, 'Rifle Firepuncher 773'),
 (51, 'Rifle Francotirador MK'),
+(64, 'RSKF-44'),
+(63, 'S-195'),
 (35, 'S-5'),
 (55, 'Sable Oscuro'),
 (19, 'SE-14C'),
@@ -160,6 +165,7 @@ INSERT INTO `especie` (`id`, `nombre`) VALUES
 (84, 'Anacondiano'),
 (36, 'Aqualish'),
 (68, 'Arcona'),
+(88, 'Ardenniano'),
 (65, 'Asogiano'),
 (54, 'Besalisko'),
 (10, 'Bith'),
@@ -180,6 +186,7 @@ INSERT INTO `especie` (`id`, `nombre`) VALUES
 (11, 'Geonosiano'),
 (27, 'Gotal'),
 (26, 'Gran'),
+(87, 'Grindalid'),
 (12, 'Gungan'),
 (79, 'Harch'),
 (1, 'Humano'),
@@ -307,10 +314,12 @@ INSERT INTO `nave` (`id`, `nombre`) VALUES
 (51, 'Destructor Estelar Interdictor'),
 (24, 'Destructor Estelar Venator'),
 (11, 'Diente del Sabueso'),
+(63, 'Ebon Hawk'),
 (58, 'El Coronet'),
 (8, 'El Espiritu'),
 (9, 'El Fantasma'),
 (12, 'Esclavo 1'),
+(64, 'First Light'),
 (61, 'Garra del Buitre'),
 (21, 'Guantelete Mandaloriano'),
 (2, 'Halcon Milenario'),
@@ -795,7 +804,16 @@ INSERT INTO `personaje` (`id`, `nombre`, `apellido`, `afiliacion`, `especie`, `p
 (353, 'Zett', 'Jukassa', 'Orden Jedi', 'Humano', 'Coruscant', 'Espada Laser (Azul)', 'Padawan', ' '),
 (354, 'Raymus', 'Antilles', 'Alianza Rebelde', 'Humano', 'Alderaan', 'DH-17', 'Capitan', 'Tantive IV'),
 (355, 'Breha', 'Organa', 'Alianza Rebelde', 'Humano', 'Alderaan', ' ', ' ', ' '),
-(356, 'Tion', 'Medon', 'Republica Galactica', 'Pauano', 'Utapau', ' ', 'Gobernador', ' ');
+(356, 'Tion', 'Medon', 'Republica Galactica', 'Pauano', 'Utapau', ' ', 'Gobernador', ' '),
+(357, 'Qu', 'Ra', 'Crimson Dawn', 'Humano', 'Corellia', 'S-195', 'Lider Criminal', 'First Light'),
+(358, 'Dryden', 'Vos', 'Crimson Dawn', 'Humano', ' Desconocido', ' ', 'Lider Criminal', 'First Light'),
+(359, 'Enfys', 'Nest', 'Milicia', 'Humano', ' Desconocido', 'Lanza', 'Contrabandista', ' '),
+(360, 'Proxima', ' ', ' ', 'Grindalid', 'Corellia', ' ', 'Lider Criminal', ' '),
+(361, 'Moloch', ' ', ' ', 'Grindalid', 'Corellia', 'Pistola Especial Snubble', 'Asesino', ' '),
+(362, 'Quay', 'Tolsite', 'Sindicato Pyke', 'Pyke', 'Oba Diah', 'CC-420', 'Comerciante', ' '),
+(363, 'Tobias', 'Beckett', 'Crimson Dawn', 'Humano', 'Glee Anselm', 'RSKF-44', 'Contrabandista', ' '),
+(364, 'Val', ' ', 'Crimson Dawn', 'Humano', ' Desconocido', 'EC-17', 'Contrabandista', ' '),
+(365, 'Rio', 'Durant', 'Crimson Dawn', 'Ardenniano', 'Ardennia', ' ', 'Piloto', ' ');
 
 -- --------------------------------------------------------
 
@@ -824,6 +842,7 @@ INSERT INTO `planeta_origen` (`id`, `nombre`) VALUES
 (21, 'Ahch-To'),
 (8, 'Alderaan'),
 (99, 'Alsakan'),
+(145, 'Ardennia'),
 (98, 'Aria Prime'),
 (111, 'Atollon'),
 (14, 'Bespin'),
@@ -1012,25 +1031,25 @@ ALTER TABLE `planeta_origen`
 -- AUTO_INCREMENT de la tabla `afiliacion`
 --
 ALTER TABLE `afiliacion`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT de la tabla `arma`
 --
 ALTER TABLE `arma`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67;
 
 --
 -- AUTO_INCREMENT de la tabla `especie`
 --
 ALTER TABLE `especie`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=87;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=89;
 
 --
 -- AUTO_INCREMENT de la tabla `nave`
 --
 ALTER TABLE `nave`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
 
 --
 -- AUTO_INCREMENT de la tabla `oficio`
@@ -1042,13 +1061,13 @@ ALTER TABLE `oficio`
 -- AUTO_INCREMENT de la tabla `personaje`
 --
 ALTER TABLE `personaje`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=357;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=366;
 
 --
 -- AUTO_INCREMENT de la tabla `planeta_origen`
 --
 ALTER TABLE `planeta_origen`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=145;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=146;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
