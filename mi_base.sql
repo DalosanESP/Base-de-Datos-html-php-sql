@@ -813,7 +813,7 @@ INSERT INTO `personaje` (`id`, `nombre`, `apellido`, `afiliacion`, `especie`, `p
 (362, 'Quay', 'Tolsite', 'Sindicato Pyke', 'Pyke', 'Oba Diah', 'CC-420', 'Comerciante', ' '),
 (363, 'Tobias', 'Beckett', 'Crimson Dawn', 'Humano', 'Glee Anselm', 'RSKF-44', 'Contrabandista', ' '),
 (364, 'Val', ' ', 'Crimson Dawn', 'Humano', ' Desconocido', 'EC-17', 'Contrabandista', ' '),
-(365, 'Rio', 'Durant', 'Crimson Dawn', 'Ardenniano', 'Ardennia', ' ', 'Piloto', ' ');
+(365, 'Rio', 'Durant', 'Crimson Dawn', 'Ardenniano', 'Ardennia', 'SE-14C', 'Piloto', ' ');
 
 -- --------------------------------------------------------
 
